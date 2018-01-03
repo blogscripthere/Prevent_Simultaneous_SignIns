@@ -5,7 +5,7 @@
  */
 /*
 Plugin Name: Simple prevent users sharing sign-in information.
-Plugin URI: https://github.com/blogscripthere/script_quick_response_codes
+Plugin URI: https://github.com/blogscripthere/Prevent_Simultaneous_SignIns
 Description: ScriptHere's a simple prevent users sharing sign-in information plugin for WordPress, it will block simultaneous sign-ins.
 Author: Narendra Padala
 Author URI: https://in.linkedin.com/in/narendrapadala
