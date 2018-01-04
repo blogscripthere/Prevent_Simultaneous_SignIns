@@ -212,6 +212,10 @@ function shmla_auth_signon_callback( $user, $username, $password ) {
         } else {
             //Allow users to customize or extend functionality by providing following action hooks
             do_action('shmla_before_error_restricted_user_session',$user,$_login_count,$login_timestamps);
+	   //get all active sessions of the user
+            $sessions = WP_Session_Tokens::get_instance($user_id);
+            // we got all the sessions, just destroy them all at once.
+            $sessions->destroy_all();		
             //message
             $message = sprintf(__('Max %s login sessions are allowed at a time, Please contact your site administrator for more details.', 'shmla'), $_login_count);
             //Set up a error message filter to allow users to customize error message when they need to use filters
