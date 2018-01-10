@@ -206,7 +206,7 @@ function shmla_auth_signon_callback( $user, $username, $password ) {
         // get login timestamp from all sessions
         $login_timestamps = (!empty($user_sessions)) ? array_values(wp_list_pluck($user_sessions, 'login')):array();
         //check whether user's session less then the limit specified by the administrator, then continue
-        if (count($login_timestamps) < $_login_count) {
+        if (count($login_timestamps) <= $_login_count) {
             //return
             return $user;
         } else {
